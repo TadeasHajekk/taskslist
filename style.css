@@ -27,7 +27,7 @@ body {
     text-align: center;
     font-size: 2.5em;
     font-weight: 700;
-    color: #ff0000; /* Barva rudého meče (Sith) nebo žlutá/modrá (Jedi) - Zvolíme SITH pro drama! */
+    color: #ff0000; /* Barva rudého meče (Sith) */
     text-shadow: 
         0 0 10px #ff0000,
         0 0 20px #ff0000,
@@ -83,6 +83,15 @@ body {
     box-shadow: 0 0 15px rgba(255, 0, 0, 1);
 }
 
+/* Styl pro neaktivní tlačítko */
+.btn-primary:disabled {
+    background-color: #555555;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
 /* Seznam úkolů */
 #taskList {
     list-style: none; /* Odstraní standardní tečky/čísla */
@@ -109,7 +118,7 @@ body {
     background-color: #1a1a2e; /* Ještě tmavší, jako dokončená mise */
     color: #888888;
     text-decoration: line-through;
-    border-left-color: #ff0000; /* Rudá lišta, úkol byl dokončen (ať už pro dobro, nebo zlo) */
+    border-left-color: #ff0000; /* Rudá lišta, úkol byl dokončen */
     opacity: 0.6;
 }
 

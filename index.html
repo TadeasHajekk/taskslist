@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task List – Task Guide</title>
+    <title>Task List – přehled tasků</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
     <div class="container">
         <h1 class="title-glow">TASK LIST</h1>
         
-        <div class="input-area">
-            <input type="text" id="taskInput" placeholder="Vytvoř nový úkol..." class="minecraft-input">
-            <button id="addTaskButton" class="btn-primary">PŘIDAT</button>
-        </div>
+        <form class="input-area">
+            <input 
+                type="text" 
+                id="task" 
+                autocomplete="off" 
+                autofocus 
+                placeholder="Přidej úkol...">
+            
+            <button id="submit" class="btn-primary" type="submit">PŘIDAT TASK</button>
+        </form>
         
-        <ul id="taskList">
+        <ul id="tasks">
             </ul>
         
         <div class="footer-note">
-            <p>--------------------------------------------------------------------------------------------------------------------------------------------</p>
+            <p></p>
         </div>
     </div>
     
