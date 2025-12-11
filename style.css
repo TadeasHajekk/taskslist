@@ -1,0 +1,143 @@
+/* Globální nastavení a font pro sci-fi dojem */
+body {
+    background-color: #1a1a2e; /* Velmi tmavé pozadí (vesmír) */
+    color: #e5e5e5; /* Světlá barva textu */
+    font-family: 'Orbitron', sans-serif; /* Futurstický font */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Zarovnáme na horní část obrazovky */
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 50px; /* Trochu místa odshora */
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    background: rgba(43, 43, 64, 0.7); /* Poloprůhledný, tmavý kontejner */
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2); /* Jemná modrá/cyan záře po obvodu */
+    border: 1px solid #00ffff; /* Rámeček v neonové barvě */
+}
+
+/* Titulek s výraznou záři */
+.title-glow {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ff0000; /* Barva rudého meče (Sith) nebo žlutá/modrá (Jedi) - Zvolíme SITH pro drama! */
+    text-shadow: 
+        0 0 10px #ff0000,
+        0 0 20px #ff0000,
+        0 0 40px #ff0000; /* Vytvoření neonového efektu */
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 10px;
+}
+
+/* Vstupní pole a tlačítko */
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 12px;
+    border: 2px solid #00ffff; /* Neonový rámeček */
+    border-radius: 8px;
+    background-color: #2b2b40; /* Tmavé pozadí inputu */
+    color: #00ffff; /* Neonový text */
+    font-size: 1em;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: #ff0000; /* Při aktivaci se změní na rudou záři */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+.btn-primary {
+    padding: 12px 20px;
+    background-color: #00ffff; /* Modrý Jedi akcent */
+    color: #1a1a2e;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+}
+
+.btn-primary:hover {
+    background-color: #ff0000; /* Při najetí myší Sith mód! */
+    color: #e5e5e5;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 1);
+}
+
+/* Seznam úkolů */
+#taskList {
+    list-style: none; /* Odstraní standardní tečky/čísla */
+    padding: 0;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #3b3b55; /* Mírně světlejší pozadí pro jednotlivé úkoly */
+    border-radius: 8px;
+    border-left: 5px solid #00ffff; /* Modrá lišta na levé straně */
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+/* Styl pro dokončené úkoly */
+#taskList li.completed {
+    background-color: #1a1a2e; /* Ještě tmavší, jako dokončená mise */
+    color: #888888;
+    text-decoration: line-through;
+    border-left-color: #ff0000; /* Rudá lišta, úkol byl dokončen (ať už pro dobro, nebo zlo) */
+    opacity: 0.6;
+}
+
+/* Tlačítko pro smazání */
+.delete-btn {
+    background: none;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.delete-btn:hover {
+    background-color: #ff0000;
+    color: #e5e5e5;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 1);
+}
+
+/* Poznámka v patičce */
+.footer-note {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #00ffff;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
